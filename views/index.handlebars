@@ -1,26 +1,36 @@
+<section class="container">
 <h1>BeeseChurgers!</h1>
+  <article class="row">
 
-<h2>Burgers that are still existing!</h2>
+    <div class="column col-lg-6">
+      <h2>Burgers that are still existing!</h2>
+      <ul>
+        {{#each burgers}}
+        {{#unless consumed}}
+        {{> burgers/burger-block consumed=true}}
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+
+    <div class="column col-lg-6">
+      <h2>Burgers that have been consumed!</h2>
+      <ul>
+        {{#each burgers}}
+        {{#if consumed}}
+        {{> burgers/burger-block consumed=false}}
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+
+  </article>
+
+</section>
 
 
 
-<ul>
-  {{#each burgers}}
-    {{#unless consumed}}
-      {{> burgers/burger-block consumed=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
 
-<h2>Burgers that have been consumed!</h2>
-
-<ul>
-  {{#each burgers}}
-    {{#if consumed}}
-      {{> burgers/burger-block consumed=false}}
-    {{/if}}
-  {{/each}}
-</ul>
 
 <h2>Add a Burger</h2>
 <form class="create-form">
