@@ -1,5 +1,8 @@
 {
-    "production": {
+  "production": {
+    "user": "y2do04my95yiu43b",
+    "password": "vojvt3u6fc2j9uvn",
+    "database": "vj2bjwdd5b1t44z7",
     "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
   }
